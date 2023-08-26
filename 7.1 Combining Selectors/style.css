@@ -1,0 +1,28 @@
+/* Write your code here: */
+
+/*simply combine more than one selector to apply same property to them*/
+/*can be [class, id] or [class, class]  etc*/
+h1, h2{
+    color:blueviolet;
+}
+
+/*parent > immediate_child*/
+.box>p{
+    color:firebrick;
+}
+
+/*ancestor descendant*/
+.box li{
+    color:blue;
+}
+
+/*chaining of selectors*/
+li.done{
+    color:seagreen;
+}
+
+/*combining combination of selectors*/
+/*can also be: ul>p.done*/
+ul p.done{
+    font-size: 0.5rem;
+}
