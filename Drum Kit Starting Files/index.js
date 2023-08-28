@@ -36,9 +36,19 @@ function checkKeys(key) {
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function(){
      checkKeys(this.innerHTML);
+     addAnimation(this.innerHTML);
   });
    
 }
 document.addEventListener("keydown", function(event){
      checkKeys(event.key);
+     addAnimation(event.key);
 });
+function addAnimation(currentkey) {
+  var drumBox=document.querySelector("."+currentkey);
+  drumBox.classList.add("pressed");
+  setTimeout(() => {
+    drumBox.classList.remove("pressed");
+  }, 100);
+  
+}
